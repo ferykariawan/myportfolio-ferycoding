@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: row nowrap;
+    background-color: coral;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    z-index: 9999;
+}
+
+nav .logo h4 {
+    color: #f5f5f5;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.75rem;
+    line-height: inherit;
+}
+
+nav .menu-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+nav .menu-container .menu {
+    display: flex;
+
+}
+
+nav .menu-container .menu .list {
+    list-style: none;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+nav .menu-container .menu .list:hover {
+    background-color: #f5f5f5;
+}
+
+nav .menu-container .menu .list .link:active {
+    background-color: #f5f5f5;
+}
+
+
+nav .menu-container .menu .list .link {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 0.5rem 1rem;
+}
+
+nav .menu-container .menu .list .link:hover {
+    color: coral;
+}
+
+nav .hamburger-menu {
+    cursor: pointer;
+    display: none;
+}
+
+nav .hamburger-menu div {
+    background-color: whitesmoke;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* body {
+        overflow: hidden;
+    } */
+
+    nav .hamburger-menu {
+        display: block;
+    }
+
+    nav .menu-container .menu {
+        position: absolute;
+        right: 0px;
+        flex-direction: column;
+        top: 55px;
+        background-color: #0f1626;
+        height: auto;
+        align-items: center;
+        z-index: -1;
+        width: 100%;
+        transform: translateX(100%);
+    }
+
+    nav .menu-container .menu .list .link {
+        opacity: 0;
+    }
+}
+
+nav .menu-container .nav-active {
+    transform: translateX(0);
+}
+
+nav .menu-container .nav-active .list .link {
+    opacity: 1;
+}
+
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#home .container {
+    position: relative;
+    background-image: url(image/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 1000px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#home .container .description {
+    position: relative;
+    max-width: 1400px;
+    top: 40%;
+    margin: auto;
+    padding: 2em;
+}
+
+#home .container .description h1 {
+    color: #f5f5f5;
+    font-size: 2.5rem;
+}
+
+#home .container .description p {
+    color: #f5f5f5;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+#home .container .description button {
+    background-color: coral;
+    color: #f5f5f5;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    line-height: 1.5;
+    border-radius: 7px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#about {
+    margin: 4em 0 2em;
+    padding: 1em;
+    position: relative;
+}
+
+#about .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about .container h1 {
+    color: lightseagreen;
+    margin: 2em 2em 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#about .container .underline {
+    background-color: lightseagreen;
+    margin: 1em auto 2em;
+    height: 3px;
+    width: 10em;
+}
+
+#about .container .row {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#about .container .row .avatar img {
+    height: 300px;
+    width: 300px;
+    margin-right: 15px;
+}
+
+#about .container .row .avatar h5 {
+    text-align: center;
+}
+
+#about .container .row .bio {
+    display: flexbox;
+    justify-content: center;
+    padding: 2em;
+    height: 300px;
+    max-width: 100%;
+    border-left: 4px solid lightseagreen;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+#about .container .row .bio h3 {
+    display: block;
+    max-width: 100%;
+    color: navy;
+}
+
+#about .container .row .bio p {
+    max-width: 100%;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    #about .container .row {
+        flex-direction: column;
+    }
+}
+
+#portfolio {
+    margin: 4em 0;
+    position: relative;
+}
+
+#portfolio h1 {
+    color: lightseagreen;
+    text-align: center;
+    margin: 2em 2em 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#portfolio .underline {
+    background-color: lightseagreen;
+    margin: 1em auto 4em;
+    height: 3px;
+    width: 10em;
+}
+
+#portfolio .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto;
+}
+
+#portfolio .container .port {
+    position: relative;
+    width: 33%;
+    height: 33%;
+    padding: 5px;
+}
+
+#portfolio .container .port img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#portfolio .container .port .layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background-color: lightseagreen;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+#portfolio .container .port .layer:hover {
+    opacity: 0.4;
+}
+
+@media screen and (max-width: 1200px) {
+    #portfolio .container .port {
+        width: 50%;
+        height: 50%;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #portfolio .container .port {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+    }
+}
+
+
+#blog {
+    margin: 4em 0;
+    position: relative;
+}
+
+#blog h1 {
+    color: lightseagreen;
+    text-align: center;
+    margin: 2em 2em 0 2em;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#blog .underline {
+    background-color: lightseagreen;
+    margin: 1em auto 4em;
+    height: 3px;
+    width: 10em;
+}
+
+#blog .container .card-container {
+    display: flex;
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+#blog .container .card-container .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin: 1em;
+    border: 2px solid lightseagreen;
+    border-radius: 10px;
+    padding: 0;
+}
+
+#blog .container .card-container .card .card-title {
+    position: absolute;
+    width: 100%;
+    margin: 0%;
+    text-align: center;
+    padding: 1em 0;
+    background-color: lightseagreen;
+    color: lightyellow;
+    ;
+    border-radius: 8px 8px 0 0;
+}
+
+#blog .container .card-container .card img {
+    margin-top: 3em;
+}
+
+#blog .container .card-container .card .card-desc {
+    padding: 5px;
+    margin-bottom: 2em;
+}
+
+#blog .container .card-container .card .more {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px;
+    background-color: rgba(32, 178, 171, 0.342);
+    border-top: 2px solid lightseagreen;
+    border-radius: 0 0 8px 8px;
+}
+
+#team {
+    margin: 4em 0;
+    position: relative;
+}
+
+#team h1 {
+    color: lightseagreen;
+    text-align: center;
+    margin: 2em 2em 0 2em;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#team .underline {
+    background-color: lightseagreen;
+    margin: 1em auto 4em;
+    height: 3px;
+    width: 10em;
+}
+
+#team .container .card-container {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+}
+
+#team .container .card-container .card {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 0px 10px;
+}
+
+#contact {
+    position: relative;
+}
+
+#contact .container {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+}
+
+#contact .container .getintouch {
+    position: relative;
+    height: 500px;
+    margin: auto;
+    width: 40%;
+}
+
+#contact .container .getintouch h1 {
+    position: relative;
+    top: 40%;
+    text-align: center;
+}
+
+#contact .container .form {
+    border-left: 3px solid rgba(32, 178, 171, 0.281);
+    width: 600px;
+}
+
+#contact .container .form input {
+    display: block;
+    height: 2.5em;
+    width: 80%;
+    margin: 2.5em;
+    padding: 0.5em 2em;
+}
+
+#contact .container .form textarea {
+    display: block;
+    height: 15em;
+    width: 80%;
+    margin: 2.5em;
+}
+
+#contact .container .form .submit {
+    background-color: lightseagreen;
+    color: whitesmoke;
+    border: none;
+    border-radius: 1em;
+}
